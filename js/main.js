@@ -50,7 +50,6 @@ function setup() {
 
 
 function draw() {
-  chartInfo();
   if(showGraph1){
     drawBarGraph();
   }

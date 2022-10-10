@@ -1,14 +1,4 @@
-function chartInfo(){
-    textSize(16);
-    textAlign(LEFT);
-    fill('black');
-    rectMode(CORNER);
-    text("This data shows a daylength in Helsinki.",50, height/4,width/4);
-    textSize(30);
-    text("How difference the daylength between the two cities, Helsinki and Seoul",50, height/4-120,width/4);
-  }
-  
-  let dataMin, dataMax=0;
+   let dataMin, dataMax=0;
   
   function minMax(){
   
