@@ -23,7 +23,7 @@ function draw() {
       
       let x = 10;
       let y = 10 + (i*100);
-      let w = 50;
+      let w = 30;
       let h = sunrise_mins[i]*0.1;
       
       rect(x,y,w,h);
