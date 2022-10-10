@@ -11,7 +11,7 @@ let showGraph1=true;
 
 function preload(){
   table_1 = loadTable('Daylength_Helsinki.csv', 'csv', 'header');
-  table_2 = loadTable('Daylength_Seoul.csv','csv', 'header');
+  //table_2 = loadTable('Daylength_Seoul.csv','csv', 'header');
 }
 
 function setup() {
