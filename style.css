@@ -1,16 +1,36 @@
-html, body {
-    margin: 10px;
+body {
+    margin: 0;
     padding: 0;
     height: 100%;
+    /* background: grey; */
   }
 
-canvas {
+/* canvas {
     display: block;
+    height: 90vh;
     border: solid 1px;
-  }
+    z-index: -1;
+  }  */
   
-.main{
-  color: red;
-  background-color:aquamarine;
-  border: solid 1px black;
+header{
+  background-color: yellow;
+  padding: 10px;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: black;
+  height: 10vh;
+}
+  
+main{
+  display:block;
+  height: 90vh;
+}
+
+footer{
+  background-color: yellow;
+  height: 10vh;
+  padding: 10px;
+  border-top: solid;
+  border-width: 1px;
+  border-color: black;
 }
