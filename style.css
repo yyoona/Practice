@@ -2,38 +2,54 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    font-family:Overpass;
+    font-weight: 300;
     /* background: grey; */
   }
 
 /* canvas {
     display: block;
+    background-color: beige;
     height: 90vh;
     border: solid 1px;
-    z-index: -1;
 
-  }  */
-  
+  } 
+   */
+
 header{
-  background-color: yellow;
   padding: 10px;
-  border-bottom: solid;
+  position: fixed;
+  display: block;
+  z-index: 99;
+  border: solid;
   border-width: 1px;
   border-color: black;
-  height: 10vh;
+  width: 550px;
 }
   
+.title{
+  font-size: 2em;
+  font-weight: 500;
+  padding-bottom: 1em;
+
+}
+
 main{
-  display:block;
+  display: block;
   height: 90vh;
   background-color: grey;
 
 }
 
 footer{
-  background-color: yellow;
-  height: 10vh;
+  position:fixed;
+  bottom: 0px;
+  background-color: white;
+  width: 100%;
   padding: 10px;
-  border-top: solid;
+  border: solid;
   border-width: 1px;
   border-color: black;
 }

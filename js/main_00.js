@@ -1,15 +1,17 @@
-let table_H;
-let numRows, numCols;
-
+let table_1;
+let table_2;
+let numRows_1, numCols_1;
+let numRows_2, numCols_2;
 let day = [], daylength = [];
 let diagramX, diagramY;
 let size = [];
 //let c;
-let showGraph=true;
+let showGraph1=true;
+let showGraph2=true;
 
 function preload(){
-  table_H = loadTable('./data/Daylength_Helsinki.csv', 'csv', 'header');
- // table_S = loadTable('./data/Daylength_Seoul.csv', 'csv', 'header');
+  table_1 = loadTable('./data/Daylength_Helsinki.csv', 'csv', 'header');
+  table_2 = loadTable('./data/Daylength_Seoul.csv', 'csv', 'header');
 }
 
 function setup() {
@@ -17,17 +19,33 @@ function setup() {
   rectMode(CENTER);
   
   //get the basic info of the Helsinki data
-  numRows = table_H.getRowCount();
-  numCols = table_H.getColumnCount();
+  numRows_1 = table_1.getRowCount();
+  numCols_1 = table_1.getColumnCount();
 //  print("rows:" + numRows_1 + ", cols:" + numCols_1);
   
   //load Helsinki data
-  for(let r = 0; r<table_H.getRowCount(); r++){
-    day[r] = table_H.getString(r,0);
-    daylength[r] = table_H.getNum(r,1);
-    //print(day[r1] + " " + daylength[r1])
+  for(let r_1 = 0; r_1<table_1.getRowCount(); r_1++){
+    day[r_1] = table_1.getString(r_1,0);
+    daylength[r_1] = table_1.getNum(r_1,1);
+    //print(day[r] + " " + daylength[r])
   }
+
+  //get the basic info of the Seoul data
+  numRows_2 = table_2.getRowCount();
+  numCols_2 = table_2.getColumnCount();
+//  print("rows:" + numRows_2 + ", cols:" + numCols_1);
+  
+  //load Seoul data
+  for(let r_2 = 0; r_2<table_2.getRowCount(); r_2++){
+    day[r_2] = table_2.getString(r_2,0);
+    daylength[r_2] = table_2.getNum(r_2,1);
+    //print(day[r] + " " + daylength[r])
+  }
+
+
+
   minMax_1();
+  minMax_2();
   
   //variable - value
   diagramX = width;
@@ -48,13 +66,12 @@ function setup() {
 
 
 function draw() {
-  if(showGraph){
+  if(showGraph1){
     drawBarGraph_Helsinki();
-    // drawBarGraph_Seoul();
   }
-  // if(showGraph2){
-  //   drawBarGraph_Seoul();
-  // }
+  if(showGraph2){
+    drawBarGraph_Seoul();
+  }
 
   // newButton(buttonX,buttonY,buttonW,buttonH,"SWITCH GRAPH",10);
   // newSlider(sliderX,sliderY,sliderW,sliderH,cirX,cirY)
