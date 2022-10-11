@@ -5,12 +5,13 @@ body {
     /* background: grey; */
   }
 
-canvas {
+/* canvas {
     display: block;
     height: 90vh;
     border: solid 1px;
     z-index: -1;
-  } 
+
+  }  */
   
 header{
   background-color: yellow;
@@ -21,10 +22,12 @@ header{
   height: 10vh;
 }
   
-/* main{
+main{
   display:block;
   height: 90vh;
-} */
+  background-color: grey;
+
+}
 
 footer{
   background-color: yellow;

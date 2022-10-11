@@ -1,13 +1,3 @@
-function chartInfo(){
-  textSize(16);
-  textAlign(LEFT);
-  fill('black');
-  rectMode(CORNER);
-  text("This data shows a daylength in Helsinki.",50, height/4,width/4);
-  textSize(30);
-  text("Daylength of Helsinki 2022",50, height/4-120,width/4);
-}
-
 let dataMin, dataMax=0;
 
 function minMax(){
