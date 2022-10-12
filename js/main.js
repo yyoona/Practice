@@ -1,24 +1,27 @@
 let table_H;
-let numRows, numCols;
+let table_S;
+let numRows_H, numCols_H;
+let numRows_S, numCols_S;
 
 let day = [], daylength = [];
 let diagramX, diagramY;
 let size = [];
 //let c;
-let showGraph=true;
+let showGraph_H=true;
+let showGraph_S=true;
 
 function preload(){
   table_H = loadTable('./data/Daylength_Helsinki.csv', 'csv', 'header');
- // table_S = loadTable('./data/Daylength_Seoul.csv', 'csv', 'header');
+  table_S = loadTable('./data/Daylength_Seoul.csv', 'csv', 'header');
 }
 
 function setup() {
-  createCanvas(displayWidth, displayHeight, SVG);
+  createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
   
   //get the basic info of the Helsinki data
-  numRows = table_H.getRowCount();
-  numCols = table_H.getColumnCount();
+  numRows_H = table_H.getRowCount();
+  numCols_H = table_H.getColumnCount();
 //  print("rows:" + numRows_1 + ", cols:" + numCols_1);
   
   //load Helsinki data
@@ -27,7 +30,21 @@ function setup() {
     daylength[r] = table_H.getNum(r,1);
     //print(day[r1] + " " + daylength[r1])
   }
-  minMax_1();
+
+  //get the basic info of the Seoul data
+  numRows_S = table_S.getRowCount();
+  numCols_S = table_S.getColumnCount();
+//  print("rows:" + numRows_1 + ", cols:" + numCols_1);
+  
+  //load Helsinki data
+  for(let t = 0; t<table_S.getRowCount(); t++){
+    day[t] = table_S.getString(t,0);
+    daylength[t] = table_S.getNum(t,1);
+    //print(day[r1] + " " + daylength[r1])
+  }
+
+  minMax_H();
+  minMax_S();
   
   //variable - value
   diagramX = width;
@@ -48,27 +65,13 @@ function setup() {
 
 
 function draw() {
-  if(showGraph){
+  if(showGraph_H){
     drawBarGraph_Helsinki();
-    // drawBarGraph_Seoul();
-  }
-  // if(showGraph2){
-  //   drawBarGraph_Seoul();
-  // }
 
-  // newButton(buttonX,buttonY,buttonW,buttonH,"SWITCH GRAPH",10);
-  // newSlider(sliderX,sliderY,sliderW,sliderH,cirX,cirY)
-  // if(dist(mouseX,mouseY,cirX,cirY)<30 && mouseIsPressed){
-  //   cirX = mouseX;
-  //   cirY = sliderY;
-  //   c = color('red')
-  // }else{
-  //   c = color('black')
-  // }
+  }
+  if(showGraph_S){
+
+    drawBarGraph_Seoul();
+  }
 }
 
-// function mousePressed(){
-//   if(dist(mouseX,mouseY,buttonX,buttonY)<15){
-//      showGraph1 =! showGraph1;
-//      }
-// }

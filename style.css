@@ -1,26 +1,24 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 100%;
     font-size: 1rem;
     font-family:Overpass;
     font-weight: 300;
+    background-color:#78B6FF;
     /* background: grey; */
   }
-
-/* canvas {
+/* 
+canvas {
     display: block;
-    background-color: beige;
-    height: 90vh;
-    border: solid 1px;
-
+    width: 100%;
+    background-color: grey;
   } 
    */
 
 header{
   padding: 10px;
-  position: fixed;
+  /* position: fixed; */
   display: block;
   z-index: 99;
   border: solid;
@@ -36,17 +34,18 @@ header{
 
 }
 
-main{
+.main {
   display: block;
-  height: 90vh;
-  background-color: grey;
-
+  width: 100%;
+  background-color: #78B6FF;
+  border: solid;
+  border-width: 1px;
+  border-color: black;
 }
 
 footer{
-  position:fixed;
+  position:relative;
   bottom: 0px;
-  background-color: white;
   width: 100%;
   padding: 10px;
   border: solid;
