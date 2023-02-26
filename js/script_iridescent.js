@@ -3,7 +3,7 @@ const spanElement = document.querySelector("#slideshow_span")
 let globalIndex = 0;
 
 // list of paths to the images
-let images = ["./Artistic Practice/Iridescent/Iridescent_00.jpg", "./Artistic Practice/Iridescent/Iridescent_01.jpg", "./Artistic Practice/Iridescent/Iridescent_02.jpg", "./Artistic Practice/Iridescent/Iridescent_03.jpg", "./Artistic Practice/Iridescent/Iridescent_04.jpg"];
+let images = ["../Artistic Practice/Iridescent/Iridescent_00.jpg", "../Artistic Practice/Iridescent/Iridescent_01.jpg", "../Artistic Practice/Iridescent/Iridescent_02.jpg", "../Artistic Practice/Iridescent/Iridescent_03.jpg", "../Artistic Practice/Iridescent/Iridescent_04.jpg"];
 
 
 function changeImage() {

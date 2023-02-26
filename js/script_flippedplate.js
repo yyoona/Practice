@@ -3,7 +3,7 @@ const spanElement = document.querySelector("#slideshow_span")
 let globalIndex = 0;
 
 // list of paths to the images
-let images = ["./Artistic Practice/A Flipped Plate/A_Flipped_Plate_00.jpg", "./Artistic Practice/A Flipped Plate/A_Flipped_Plate_01.jpg", "./Artistic Practice/A Flipped Plate/A_Flipped_Plate_02.jpg", "./Artistic Practice/A Flipped Plate/A_Flipped_Plate_03.jpg", "./Artistic Practice/A Flipped Plate/A_Flipped_Plate_04.jpg", "./Artistic Practice/A Flipped Plate/A_Flipped_Plate_05.jpg"];
+let images = ["../Artistic Practice/A Flipped Plate/A_Flipped_Plate_00.jpg", "../Artistic Practice/A Flipped Plate/A_Flipped_Plate_01.jpg", "../Artistic Practice/A Flipped Plate/A_Flipped_Plate_02.jpg", "../Artistic Practice/A Flipped Plate/A_Flipped_Plate_03.jpg", "../Artistic Practice/A Flipped Plate/A_Flipped_Plate_04.jpg", "../Artistic Practice/A Flipped Plate/A_Flipped_Plate_05.jpg"];
 
 
 function changeImage() {
