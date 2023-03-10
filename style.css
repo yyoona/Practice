@@ -12,11 +12,11 @@ body {
     font-weight: 300;
     overflow-x: hidden;
     position: absolute;
+    cursor: default;
 }
 
 html {
     overflow-y: scroll;
-    cursor: default;
 }
 
 hr {
@@ -171,13 +171,14 @@ img:hover {
 }
 
 .slide-show:hover {
-    cursor: pointer;
+    cursor: none;
 }
 
 a:link {
     color: Black;
     text-decoration: none;
     cursor: pointer;
+
 
 }
 
@@ -186,19 +187,27 @@ a:link {
 }
 
 
-a:hover {
-    font-weight: 700;
-
-}
 
 a:visited {
     color: Black;
+
 }
 
+a:hover {
+    /* font-weight: 700; */
+    color: #387E47;
+
+}
 
 #selected {
     text-decoration: underline;
 }
+
+#selected:hover {
+    color: #387E47;
+}
+
+
 
 footer {
     border-top: 1px solid black;
@@ -210,3 +219,16 @@ footer {
     padding-left: 20px;
     padding-bottom: 20px;
 }
+
+/* 
+.custom {
+
+position: absolute;
+width: 10px;
+height: 10px;
+z-index: 900;
+border: 2px solid #387E47;
+background-color: #387E47; 
+border-radius: 50%;
+overflow: visible;
+} */
