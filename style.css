@@ -198,9 +198,6 @@ a:hover {
     text-decoration: underline;
     color: #387E47;
     transition-duration: 300ms;
-
-
-
 }
 
 #selected,
@@ -212,7 +209,6 @@ a:hover {
 
 #selected:hover {
     color: #387E47;
-
 }
 
 
