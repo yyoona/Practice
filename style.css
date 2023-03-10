@@ -195,17 +195,26 @@ a:visited {
 
 a:hover {
     /* font-weight: 700; */
+    text-decoration: underline;
     color: #387E47;
+    transition-duration: 300ms;
+
+
 
 }
 
-#selected {
+#selected,
+#selected_menu {
     text-decoration: underline;
 }
 
+
+
 #selected:hover {
     color: #387E47;
+
 }
+
 
 
 
